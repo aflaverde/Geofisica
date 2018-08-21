@@ -35,7 +35,7 @@ def funcionG(r,z):
 # In[78]:
 
 
-#graf 2
+#graf 1
 z1=20
 r=3
 y1=funcionG(r,z1)
@@ -64,9 +64,7 @@ mitad2=max(y2)/2
 #Max g3 medio
 mitad3=max(y3)/2
 
-y1_restado=y1-mitad1
-if y1_restado==0:
-    
+y1_restado=abs(y1-mitad1)    
 
 
 # In[92]:
