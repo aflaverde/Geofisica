@@ -56,3 +56,23 @@ min(y1_restado)
 ####Punto D
 x_domo=[0, 700, 1360, 1940, 2420, 2840, 3500, 4080, 5060, 5840]
 g_rel=[-1.84e-6, -3.42e-6, -6.67e-6, -1.23e-5, -1.92e-5, -2.39e-5, -2.04e-5, -1.2e-5, -4.33e-6, -2.12e-6]
+
+
+
+##PARTE 2
+
+pS=2700
+
+
+def funcion_losa(h,z0,pP):  #h: grosor, z0: prof, pP: densidad losa
+    g2=2*G*h*(pP-pS)*((pi/2)+np.arctan(x/z0))
+    return g2
+
+anom_1=funcion_losa(5, 30, 3000)
+plt.plot(x, anom_1)
+
+anom_2=funcion_losa(5, 50, 4000)
+plt.plot(x, anom_2,)
+
+anom_3=funcion_losa(5, 100, 5000)
+plt.plot(x, anom_3)
