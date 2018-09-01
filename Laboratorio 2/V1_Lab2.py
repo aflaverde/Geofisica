@@ -51,3 +51,10 @@ idx = np.argwhere(np.diff(np.sign(y_2 - mitad2))).flatten() #Obtiene el índice 
 half2 = x_2[idx] #El índice positivo es el halfwidth de la campana
 print(half2)
 
+def radio_domo(z, x, p1, p2): #p1: densidad de la sal, p2: densidad del subsuelo
+    y_1 = ((3*max(y_interp)*((x**2 + z**2)**(3/2)) / (4*pi*G*(p1-p2)*z))**(0.33333)
+    return y_1
+         
+p_volc=2500.
+print(radio_domo(prof_real, half2[0], roS, p_volc))
+
